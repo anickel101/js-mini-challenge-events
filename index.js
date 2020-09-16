@@ -40,7 +40,38 @@ function toggleColor(element) {
   }
 }
 
+function headerEventHandler() {
+  const header = document.querySelector("#header");
+  header.addEventListener("click", function(e) {
+    toggleColor(header);
+  });
+}
+
+headerEventHandler();
 
 /***** Deliverable 2 *****/
+const addPlayerForm = document.querySelector("#new-player-form");
+addPlayerForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const player = {
+    number: addPlayerForm.number.value,
+    name: addPlayerForm.name.value,
+    nickname: addPlayerForm.nickname.value,
+    photo: addPlayerForm.photo.value,
+    likes: 0
+  }
+  addPlayerForm.reset();
+  renderPlayer(player);
+})
 
 /***** Deliverable 3 *****/
+
+playerContainer.addEventListener("click", function(e) {
+
+	if(e.target && e.target.nodeName == "BUTTON") {
+    likes = e.target.parentNode.querySelector("p").textContent;
+    numLikes = parseInt(likes.split(" ")[0]) + 1;
+    e.target.parentNode.querySelector("p").textContent = numLikes + " likes"
+	}
+});
+

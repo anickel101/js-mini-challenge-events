@@ -26,7 +26,9 @@ Once you have it working in the console, write an event listener that will use t
 
 **YOUR NOTES**
 ```
-
+1. Find the element you want to respond to an event.
+2. create an EventListener("click") for that element.
+3. call toggleColor(element)
 ```
 
 ## Deliverable 2: Create Player
@@ -38,12 +40,15 @@ Our app already has a few players in it (check out the starter code in `index.js
 Some things to keep in mind:
 - If you see the page refresh, consider adding some code to *prevent* the *default* behavior of a form submitting.
 - Make sure you're using the form *submit* event, not the *click* event.
-- You can use the `name` attribute of the input elements as an easy way to reference the input fields within the form. For example: `document.querySelector("#new-player-form").nickname` will look inside the `form#new-player-form` and return the `input` element with the `name='nickname'` attribute
+- You can use the `name` attribute of the input elements as an easy way to reference the input fields within the form. For example: `x.nickname` will look inside the `form#new-player-form` and return the `input` element with the `name='nickname'` attribute
 - Once you have access to an input field, you still need to retrieve its *value* to see what the user entered in the form!
 
 **YOUR NOTES**
 ```
-
+1. e.preventDefault
+2. create a new object from the form inputs
+3. reset the form
+4. run helper function "renderPlayer(playerObj)
 ```
 
 ## Deliverable 3: Like Button
@@ -54,5 +59,12 @@ You can decide if you'd like to use *event delegation* to handle this, or if you
 
 **YOUR NOTES**
 ```
+1. add event listener to the div#player-container
+2. check to see if the e.target is truthy and that is a BUTTON.
+3. Pull the likes text
+4. Parse the like text to find just the number.
+5. Increment the number
+6. Replace the likes text with new number.
 
+Obviously this wouldn't be the method if we were using a db.
 ```

@@ -17,7 +17,7 @@ const PLAYERS = [
     number: 66,
     name: "Trent Alexander-Arnold",
     nickname: "Young Trent",
-    photo: "https://tbrfootball.com/static/uploads/2020/03/GettyImages-1196162385.jpg",
+    photo: "https://talksport.com/wp-content/uploads/sites/5/2020/03/NINTCHDBPICT000570389575-e1584981934844.jpg?strip=all&w=960&quality=100",    
     likes: 1000
   },
   {
